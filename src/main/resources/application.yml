@@ -1,1 +1,38 @@
-spring.application.name=inventory
+server:
+  port: 8090
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  profiles:
+    active: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  r2dbc:
+    username: ${SPRING_DATASOURCE_USERNAME_DEV}
+    password: ${SPRING_DATASOURCE_PASSWORD_DEV}
+    url: ${SPRING_DATASOURCE_URL_DEV}
+    pool:
+      max-size: 10
+      max-acquire-time: 10s
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+  r2dbc:
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: ${SPRING_DATASOURCE_URL}
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  r2dbc:
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: ${SPRING_DATASOURCE_URL}
+

@@ -18,14 +18,17 @@ processes.
 1. Clone the repository:
     ```bash
    git clone url
+   
 2. Navigate to the project directory:
     ```bash
    cd projectName
+
 3. Compile the project:
     ```bash
    gradle build
 
 ## Configuration
+1. Open the **.env-template** file. Fill your environment variables and rename the file to **.env**
 
 ## Use
 
@@ -37,10 +40,14 @@ processes.
    
 ### API Endpoints
 
-    URL POSTMAN ENDPOINTS
+All endpoints can be found in this postman url
+
+   - https://www.postman.com/mission-administrator-87991227/workspace/alli-cai-hub
 
 ## Contribution
 
 ## License
 
 ## Contact
+
+   - [noldia12@gmail.com]()
