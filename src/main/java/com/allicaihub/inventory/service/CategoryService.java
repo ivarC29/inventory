@@ -25,4 +25,12 @@ public class CategoryService {
         return categoryRepository.findAll();
     }
 
+    public Mono<Category> getCategoryById(Long id) {
+        return categoryRepository.findById(id);
+    }
+
+    public Mono<Void> deleteCategoryById(Long id) {
+        return categoryRepository.deleteById(id);
+    }
+
 }
