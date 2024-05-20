@@ -5,6 +5,11 @@ spring:
     import: optional:file:.env[.properties]
   profiles:
     active: dev
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  show-actuator: true
 ---
 spring:
   config:
